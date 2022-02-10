@@ -43,10 +43,9 @@ router.route('/won')
       var reqBody = req.body;
       console.log('wallet: ' + reqBody.wallet)
       
-      res.send(await canClaim('0', '1', reqBody.wallet))
-      
-        
+      res.send(await claimTo('0', '1', reqBody.wallet))
 })
+
 // tell express to use the router after a prefix.
 app.use('/api', router);
 
